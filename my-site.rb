@@ -1,7 +1,7 @@
 require "sinatra"
 require "sinatra/reloader"
 require "sqlite3"
-# require "./lib/werk"
+require "./lib/werk"
 # require "./lib/database"
 
 
@@ -10,7 +10,7 @@ class MySite < Sinatra::Base
   register Sinatra::Reloader
 
   get '/' do
-    q = TaskList::Werk.new("tasks")
+    q = TaskList::Werk.new("task.db")
     @tasks = q.all_tasks
     erb :home
   end

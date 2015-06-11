@@ -6,8 +6,8 @@ module TaskList
   class Werk < Database
 
 def all_tasks
-    s = "SELECT * FROM tasks;"
-    query!(s)
+    statement = "SELECT * FROM tasks;"
+    query!(statement)
 end
     # query()
 

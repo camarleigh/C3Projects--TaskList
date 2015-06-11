@@ -5,7 +5,7 @@ module TaskList
     attr_reader :database_name
 
     def initialize(database_name)
-      @database_name = "db/#{ task.db }"
+      @database_name = "db/#{database_name}"
     end
 
     def your_custom_query_here(*args)
