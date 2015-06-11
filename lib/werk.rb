@@ -1,10 +1,13 @@
 require 'sqlite3'
+require "./lib/database"
+
 
 module TaskList
   class Werk < Database
 
-def show_tasks
-    query!(SELECT * FROM tasks)
+def all_tasks
+    s = "SELECT * FROM tasks;"
+    query!(s)
 end
     # query()
 
@@ -13,6 +16,6 @@ end
 
     #   stick created data from taskform into task.db
 
- 
+
   end
 end
