@@ -21,12 +21,13 @@ module TaskList
     private
 
     def query!(statement, *params)
-      db = SQLite3::Database.new database_name
+      db = SQLite3::Database.new @database_name
       db.execute statement, params
     rescue SQLite3::Exception => error
       # use this block to recover from an error
       # consider giving the user a special message back
       # inspect the `error` object for information about the error
+      puts "That's an error!"
     ensure
       db.close if db
     end
