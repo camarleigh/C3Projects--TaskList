@@ -2,7 +2,7 @@ require "sqlite3"
 
 db = SQLite3::Database.new "db/task.db"
 db.execute "CREATE TABLE tasks
-  (id INTEGER,
+  (id INTEGER PRIMARY KEY,
   taskname TEXT NOT NULL,
   description TEXT,
   datecomp TEXT);"
