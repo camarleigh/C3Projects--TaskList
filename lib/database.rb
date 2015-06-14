@@ -8,9 +8,15 @@ module TaskList
       @database_name = "db/#{database_name}"
     end
 
-    def your_custom_query_here(*args)
-
+    def write_task(taskname, description)
+      # statement = "INSERT INTO tasks (taskname, description) VALUES ('taskname', 'description');"
       query!("INSERT INTO tasks(taskname, description) VALUES (?,?);",taskname,description)
+    end
+
+    # def write_task(*args)
+    #
+    #
+
 
       # db = SQLite3::Database.new "db/task.db"
       # db.execute "INSERT INTO tasks(taskname, description) VALUES('taskname', 'description');"
@@ -22,7 +28,7 @@ module TaskList
       # call `query!` to interact with the database
 
       # determine what should be returned
-    end
+
 
     private
 

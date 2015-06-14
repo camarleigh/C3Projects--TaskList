@@ -10,19 +10,23 @@ class MySite < Sinatra::Base
   register Sinatra::Reloader
 
   get '/' do
-    q = TaskList::Werk.new("task.db")
-    @tasks = q.all_tasks
+    werk = TaskList::Werk.new("task.db")
+    @tasks = werk.all_tasks
     erb :home
   end
 
-
   get '/taskform' do
+    @taskname = params[:taskname]
     erb :taskform
+
   end
 
 
   post'/taskform' do
-    erb :taskform
+    werk = TaskList::Werk.new("task.db")
+    werk.write_task(params[:taskname], params[:description])
+    @tasks = werk.all_tasks
+    erb :home
   end
 
 end
