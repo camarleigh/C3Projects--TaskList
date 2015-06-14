@@ -1,9 +1,12 @@
+<h1>Getting Shizz Done!</h1>
 
-<h1></h1>
+
+<img src="/images/high-five.gif" alt = "Liz doing self high-five">
 
 <p> You know you got stuff to do. Click <a href="taskform">HERE</a> to start getting stuff done.</p>
 
-
+<ul>
 <% @tasks.each do |task| %>
-<%= task %>
+  <li><%= task %></li>
 <% end %>
+</ul>

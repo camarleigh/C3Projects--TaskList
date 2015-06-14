@@ -1,1 +1,28 @@
-style.css
+
+
+body{
+font-family: Verdana, Geneva, sans-serif;
+color:rgb(111,36,152);
+background:rgb(255,255,155);
+
+}
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1{
+  text-align: center;
+}
+
+form{
+  width:250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label{
+ display: block;
+}

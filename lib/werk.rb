@@ -11,6 +11,9 @@ def all_tasks
 end
 
 
+def write_task(taskname, description)
+    query!("INSERT INTO tasks(taskname, description) VALUES (?,?);",taskname, description)
+end
 
 
   end
