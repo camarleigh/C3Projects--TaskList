@@ -9,26 +9,8 @@ module TaskList
     end
 
     def write_task(taskname, description)
-      # statement = "INSERT INTO tasks (taskname, description) VALUES ('taskname', 'description');"
       query!("INSERT INTO tasks(taskname, description) VALUES (?,?);",taskname,description)
     end
-
-    # def write_task(*args)
-    #
-    #
-
-
-      # db = SQLite3::Database.new "db/task.db"
-      # db.execute "INSERT INTO tasks(taskname, description) VALUES('taskname', 'description');"
-
-      # santitize/validate your arguments
-
-      # prepare your statement
-
-      # call `query!` to interact with the database
-
-      # determine what should be returned
-
 
     private
 
