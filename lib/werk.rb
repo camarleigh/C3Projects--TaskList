@@ -12,7 +12,7 @@ end
 
 
 def write_task(taskname, description)
-    query!("INSERT INTO tasks(taskname, description) VALUES (?,?);",taskname, description)
+    check_query!("INSERT INTO tasks(taskname, description) VALUES (?,?);",taskname, description)
 end
 
 
