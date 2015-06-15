@@ -5,6 +5,6 @@ db.execute "CREATE TABLE tasks
   (id INTEGER PRIMARY KEY,
   taskname TEXT NOT NULL,
   description TEXT,
-  datecomp varchar default 'Work in Progress');"
-
+  datecomp varchar default 'Werk in Progress');"
+# Data consistancy! Everything werks.
 db.close if db
