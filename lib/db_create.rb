@@ -6,5 +6,6 @@ db.execute "CREATE TABLE tasks
   taskname TEXT NOT NULL,
   description TEXT,
   datecomp varchar default 'Werk in Progress');"
+# db.execute "RAISE(FAIL, 'Please provide a task.')"
 # Data consistancy! Everything werks.
 db.close if db

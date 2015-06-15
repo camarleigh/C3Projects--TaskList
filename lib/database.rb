@@ -15,6 +15,9 @@ module TaskList
       # This provides a failsafe in case the taskname requirement
       # in the form fails to catch an empty string.
       raise "At least type in a task!" if @taskname.length == 0
+      #        "RAISE(FAIL, 'Please provide a task.')" 
+      ensure
+        db.close if db
     end
 
     private
