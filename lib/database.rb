@@ -9,15 +9,14 @@ module TaskList
     end
 
     def check_query!(statement, *params)
-      db = SQLite3::Database.new @database_name
-      db.execute statement, params
       @taskname = params[0]
       # This provides a failsafe in case the taskname requirement
       # in the form fails to catch an empty string.
-      raise "At least type in a task!" if @taskname.length == 0
-      #        "RAISE(FAIL, 'Please provide a task.')" 
-      ensure
-        db.close if db
+      if @taskname.length == 0
+        raise "At least type in a task!"
+      else
+        query!(statement, *params)
+      end
     end
 
     private
